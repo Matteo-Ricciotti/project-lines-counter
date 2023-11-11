@@ -1,6 +1,6 @@
 {
   "name": "project-lines-counter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI package that counts the lines of your project",
   "main": "./src/index.mjs",
   "bin": {
