@@ -1,6 +1,6 @@
 {
   "name": "project-lines-counter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI package that counts the lines of your project",
   "main": "./src/index.mjs",
   "bin": {
@@ -21,6 +21,7 @@
   },
   "author": "Matteo-Ricciotti",
   "license": "MIT",
+  "homepage": "https://github.com/Matteo-Ricciotti",
   "bugs": {
     "url": "https://github.com/Matteo-Ricciotti/project-lines-counter/issues"
   },
