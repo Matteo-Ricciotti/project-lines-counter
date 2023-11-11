@@ -22,10 +22,10 @@
   "author": "Matteo-Ricciotti",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Microsoft/TypeScript/issues"
+    "url": "https://github.com/Matteo-Ricciotti/project-lines-counter/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/TypeScript.git"
+    "url": "https://github.com/Matteo-Ricciotti/project-lines-counter"
   }
 }
