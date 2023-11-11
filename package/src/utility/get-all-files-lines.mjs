@@ -2,7 +2,7 @@ import fs from 'fs';
 
 const LOCK_FILES = ['package-lock.json', 'yarn.lock', 'pnpm-lock.yaml'];
 
-export default (paths) => {
+export default (paths, skipEmpty) => {
   const filesLines = [];
 
   for (const path of paths) {
@@ -10,7 +10,9 @@ export default (paths) => {
 
     const content = fs.readFileSync(path, 'utf-8');
 
-    const lines = content.split(/\n/);
+    let lines = content.split(/\n/);
+
+    if (skipEmpty) lines = lines.filter((l) => l);
 
     filesLines.push(lines.length);
   }

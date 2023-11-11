@@ -7,6 +7,9 @@ export default (path) => {
 
     return files;
   } catch (err) {
+    process.stdout.write('\u001B[1A');
+    process.stdout.clearLine();
+
     console.log(chalk.red(`ERROR: Unable to read the path: ${path}`));
     process.exit(1);
   }

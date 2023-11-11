@@ -1,6 +1,8 @@
 import { join } from 'path';
 import readDir from './read-dir.mjs';
+import fs from 'fs';
 
+const IGNORE_FOLDERS = ['.git', '.ttf', '.png', '.jpg', '.jpeg'];
 const DEPENDENCIES_FOLDERS = ['node_modules'];
 
 const getAllFilesPaths = (path) => {
@@ -11,7 +13,7 @@ const getAllFilesPaths = (path) => {
   for (const file of files) {
     const filePath = join(path, file.name).replace(/\\/g, '/');
 
-    if (DEPENDENCIES_FOLDERS.some((f) => filePath.includes(f))) continue;
+    if ([...IGNORE_FOLDERS, ...DEPENDENCIES_FOLDERS].some((f) => filePath.includes(f))) continue;
 
     if (!file.isDirectory()) {
       response.push(filePath);

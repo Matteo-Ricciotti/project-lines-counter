@@ -8,5 +8,5 @@ export default async () => {
     default: () => '../my-project',
   });
 
-  return input;
+  return input.path;
 };
